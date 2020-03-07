@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MyFlight_Web:war">
+    <output-path>$PROJECT_DIR$/MyFlight_Web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>MyFlight_Web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="MyFlight_Web.war">
+      <element id="artifact" artifact-name="MyFlight_Web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,43 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation=
+    "	http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+        <!-- 事务管理器 -->
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                <property name="dataSource" ref="dataSource" />
+        </bean>
+
+        <!-- 事务增强 -->
+        <tx:advice id="txAdvice" transaction-manager="transactionManager">
+                <tx:attributes>
+                        <tx:method name="add*" read-only="false"/>
+                        <tx:method name="update*" read-only="false"/>
+                        <tx:method name="delete*" read-only="false"/>
+                        <tx:method name="*" read-only="true" />
+                </tx:attributes>
+        </tx:advice>
+
+        <!-- aop -->
+        <aop:config>
+                <aop:pointcut id="cutPoint" expression="execution(* cn.qphone.MyFlight.service.*.*(..))"/>
+                <aop:advisor advice-ref="txAdvice" pointcut-ref="cutPoint"></aop:advisor>
+        </aop:config>
+
+        <!-- 扫描 -->
+        <context:component-scan base-package="cn.qphone.MyFlight.service" />
+
+</beans>

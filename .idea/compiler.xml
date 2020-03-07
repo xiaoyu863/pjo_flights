@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="MyFlight_Service" />
+        <module name="MyFlight_Common" />
+        <module name="MyFlight_Mapper" />
+        <module name="MyFlight_Web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MyFlight_Common" target="1.8" />
+      <module name="MyFlight_Mapper" target="1.8" />
+      <module name="MyFlight_Parent" target="1.8" />
+      <module name="MyFlight_Service" target="1.8" />
+      <module name="MyFlight_Web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

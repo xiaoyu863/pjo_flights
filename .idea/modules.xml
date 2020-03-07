@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MyFlight.iml" filepath="$PROJECT_DIR$/.idea/MyFlight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyFlight_Common/MyFlight_Common.iml" filepath="$PROJECT_DIR$/MyFlight_Common/MyFlight_Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyFlight_Mapper/MyFlight_Mapper.iml" filepath="$PROJECT_DIR$/MyFlight_Mapper/MyFlight_Mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyFlight_Parent/MyFlight_Parent.iml" filepath="$PROJECT_DIR$/MyFlight_Parent/MyFlight_Parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyFlight_Service/MyFlight_Service.iml" filepath="$PROJECT_DIR$/MyFlight_Service/MyFlight_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyFlight_Web/MyFlight_Web.iml" filepath="$PROJECT_DIR$/MyFlight_Web/MyFlight_Web.iml" />
+    </modules>
+  </component>
+</project>
